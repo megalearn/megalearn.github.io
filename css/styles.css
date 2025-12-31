@@ -363,8 +363,8 @@ body[data-active-section] .section:not(.active):hover .section-header {
 .section-body {
   display: none;
   padding-bottom: 16px;
-  width: 963px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 963px;
 }
 
 .section.active .section-body {
@@ -501,26 +501,30 @@ body[data-active-section] .section:not(.active):hover .section-header {
    ============================================ */
 @media (max-width: 1280px) {
   .main-content {
-    padding-top: 120px;
+    padding-top: 40vh;
   }
   
   .sections-container {
     width: 100%;
+    max-width: calc(100vw - 24px);
   }
   
   .section-number {
-    font-size: 48px;
-    width: 70px;
+    font-size: 64px;
+    width: 90px;
+    line-height: 52px;
+    letter-spacing: -1.92px;
   }
   
   .header-btn {
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 64px;
+    line-height: 52px;
+    letter-spacing: -1.92px;
   }
   
   .section-body p {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 22px;
+    line-height: 30px;
   }
   
   .game-row {
@@ -529,8 +533,8 @@ body[data-active-section] .section:not(.active):hover .section-header {
   }
   
   .game-name {
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 36px;
+    line-height: 40px;
   }
   
   .game-preview {
@@ -544,38 +548,69 @@ body[data-active-section] .section:not(.active):hover .section-header {
 }
 
 @media (max-width: 768px) {
+  /* Main Header - from Figma 768px spec */
   .main-header {
-    top: 12px;
+    top: 8px;
     left: 12px;
     right: 12px;
   }
   
   .logo {
-    height: 28px;
-    width: auto;
+    height: 24px;
+    width: 143px;
   }
   
   .ai-link {
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.54px;
   }
   
-  .section-number {
-    font-size: 32px;
-    width: 50px;
+  /* Sections Container - full width */
+  .sections-container {
+    width: 100%;
+    max-width: 744px;
+  }
+  
+  /* Section Numbers - H1 Thin: 51px */
+  .sections-container .section .section-number {
+    font-size: 51px;
+    width: 71px;
     line-height: 40px;
+    letter-spacing: -1.02px;
+    flex-shrink: 0;
   }
   
-  .header-btn {
-    font-size: 32px;
+  /* Section Headers - H1 Black: 51px */
+  .sections-container .section .section-content .header-btn {
+    font-size: 51px;
     line-height: 40px;
-    letter-spacing: -1px;
+    letter-spacing: -1.02px;
+    width: 100%;
   }
   
+  /* Align section items at the start */
+  .section {
+    align-items: flex-start;
+    scroll-margin-top: 60px;
+  }
+  
+  .section-content {
+    gap: 8px;
+  }
+  
+  /* Section Body - Body Normal: 18px */
   .section-body p {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 450;
     line-height: 24px;
   }
   
+  .section-content {
+    gap: 8px;
+  }
+  
+  /* Games List */
   .game-row {
     grid-template-columns: 1fr;
     height: auto;
@@ -584,8 +619,118 @@ body[data-active-section] .section:not(.active):hover .section-header {
   }
   
   .game-name {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.96px;
+  }
+  
+  .game-platform,
+  .game-type,
+  .game-year {
+    font-size: 14px;
+    text-align: left;
+    align-self: flex-start;
+  }
+  
+  /* Footer - from Figma 768px spec */
+  .footer-label {
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    line-height: 24px;
+  }
+  
+  .footer-link {
+    font-size: 18px;
+    letter-spacing: -0.54px;
+    line-height: 24px;
+  }
+}
+
+/* ============================================
+   480px BREAKPOINT - Small Mobile
+   ============================================ */
+@media (max-width: 480px) {
+  /* Main Header - from Figma 375px spec */
+  .main-header {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+  }
+  
+  .logo {
+    height: 24px;
+    width: 143px;
+  }
+  
+  .ai-link {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.54px;
+  }
+  
+  /* Main Content - starts at 20% from top */
+  .main-content {
+    padding-top: 20vh;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  /* Prevent sections from scrolling behind fixed header */
+  .section {
+    scroll-margin-top: 60px;
+  }
+  
+  /* Sections Container - full width */
+  .sections-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Section Numbers - 35px */
+  .sections-container .section .section-number {
+    font-size: 35px;
+    width: 45px;
+    line-height: 32px;
+    letter-spacing: -1.05px;
+    flex-shrink: 0;
+  }
+  
+  /* Section Headers - 35px */
+  .sections-container .section .section-content .header-btn {
+    font-size: 35px;
+    line-height: 32px;
+    letter-spacing: -1.05px;
+    width: 100%;
+  }
+  
+  /* Align section items */
+  .section {
+    align-items: flex-start;
+  }
+  
+  .section-content {
+    gap: 10px;
+  }
+  
+  /* Section Body - 18px */
+  .section-body p {
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 24px;
+  }
+  
+  /* Games List */
+  .game-row {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 12px 0;
+    gap: 4px;
+  }
+  
+  .game-name {
     font-size: 24px;
     line-height: 28px;
+    letter-spacing: -0.72px;
   }
   
   .game-platform,
@@ -596,12 +741,22 @@ body[data-active-section] .section:not(.active):hover .section-header {
     align-self: flex-start;
   }
   
+  /* Footer - from Figma 375px spec */
+  .main-footer {
+    bottom: 20px;
+    right: 8px;
+  }
+  
   .footer-label {
-    font-size: 14px;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    line-height: 24px;
   }
   
   .footer-link {
-    font-size: 16px;
+    font-size: 18px;
+    letter-spacing: -0.54px;
+    line-height: 24px;
   }
 }
 
