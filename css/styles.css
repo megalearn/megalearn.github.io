@@ -1,0 +1,607 @@
+/*! Megalearn Website | Based on Aspekta Font */
+
+/* ============================================
+   FONTS
+   ============================================ */
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../assets/fonts/Aspekta-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/Aspekta-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url('../assets/fonts/Aspekta-450.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/Aspekta-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 650;
+  font-display: swap;
+  src: url('../assets/fonts/Aspekta-650.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  font-style: normal;
+  font-weight: 1000;
+  font-display: swap;
+  src: url('../assets/fonts/Aspekta-1000.woff2') format('woff2');
+}
+
+/* ============================================
+   CSS VARIABLES / THEME COLORS
+   ============================================ */
+:root {
+  --bg: #fffff5;
+  --black: #000000;
+  --blue: #115dfb;
+  --pink: #fc1db8;
+  --orange: #ff3939;
+  
+  /* Default theme (multi-color) */
+  --theme-color: var(--black);
+  --color-00: var(--blue);
+  --color-01: var(--pink);
+  --color-02: var(--orange);
+  --color-03: var(--black);
+  
+  /* Typography */
+  --font-family: 'Aspekta', system-ui, -apple-system, sans-serif;
+}
+
+/* Theme: Blue (Section 00 active) */
+body[data-theme="blue"] {
+  --theme-color: var(--blue);
+  --color-00: var(--blue);
+  --color-01: var(--blue);
+  --color-02: var(--blue);
+  --color-03: var(--blue);
+}
+
+/* Theme: Pink (Section 01 active) */
+body[data-theme="pink"] {
+  --theme-color: var(--pink);
+  --color-00: var(--pink);
+  --color-01: var(--pink);
+  --color-02: var(--pink);
+  --color-03: var(--pink);
+}
+
+/* Theme: Orange (Section 02 active) */
+body[data-theme="orange"] {
+  --theme-color: var(--orange);
+  --color-00: var(--orange);
+  --color-01: var(--orange);
+  --color-02: var(--orange);
+  --color-03: var(--orange);
+}
+
+/* Theme: Black (Section 03 active) */
+body[data-theme="black"] {
+  --theme-color: var(--black);
+  --color-00: var(--black);
+  --color-01: var(--black);
+  --color-02: var(--black);
+  --color-03: var(--black);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg);
+  color: var(--black);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+/* Fixed Header */
+.main-header {
+  position: fixed;
+  top: 8px;
+  left: 12px;
+  right: 12px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.main-header > * {
+  pointer-events: auto;
+}
+
+.logo {
+  display: block;
+  height: 36px;
+  width: 214.733px;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+}
+
+.ai-link {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.72px;
+  color: var(--black);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.ai-link:hover {
+  opacity: 0.7;
+}
+
+/* Fixed Footer */
+.main-footer {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: var(--black);
+  pointer-events: none;
+}
+
+.main-footer > * {
+  pointer-events: auto;
+}
+
+.footer-label {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+}
+
+.footer-link {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.72px;
+  text-align: right;
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.7;
+}
+
+/* Main Content Area (Scrollable) */
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: calc(40vh);
+  padding-left: 12px;
+  padding-bottom: 200px;
+}
+
+.sections-container {
+  width: 1073px;
+  max-width: calc(100vw - 24px);
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.section {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  overflow: visible;
+}
+
+/* Fade inactive sections when a section is active */
+body[data-active-section] .section:not(.active) {
+  opacity: 0.3;
+}
+
+body[data-active-section] .section:not(.active) .section-header {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Hover effect: show header and full opacity when hovering on inactive sections */
+body[data-active-section] .section:not(.active):hover {
+  opacity: 1;
+}
+
+body[data-active-section] .section:not(.active):hover .section-header {
+  opacity: 1;
+  visibility: visible;
+}
+
+.section-number {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: -2.4px;
+  text-transform: uppercase;
+  width: 110px;
+  flex-shrink: 0;
+  text-align: left;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+/* Section-specific colors */
+.section[data-section="00"] .section-number,
+.section[data-section="00"] .section-header,
+.section[data-section="00"] .section-body {
+  color: var(--color-00);
+}
+
+.section[data-section="01"] .section-number,
+.section[data-section="01"] .section-header,
+.section[data-section="01"] .section-body {
+  color: var(--color-01);
+}
+
+.section[data-section="02"] .section-number,
+.section[data-section="02"] .section-header,
+.section[data-section="02"] .section-body {
+  color: var(--color-02);
+}
+
+.section[data-section="03"] .section-number,
+.section[data-section="03"] .section-header,
+.section[data-section="03"] .section-body {
+  color: var(--color-03);
+}
+
+.section-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: visible;
+}
+
+.section-header {
+  width: 100%;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.header-btn {
+  font-size: 80px;
+  font-weight: 1000;
+  line-height: 64px;
+  letter-spacing: -2.4px;
+  text-transform: uppercase;
+  text-align: left;
+  width: 963px;
+  max-width: 100%;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.header-btn:hover {
+  opacity: 0.8;
+}
+
+/* Section Body (hidden by default, shown when active) */
+.section-body {
+  display: none;
+  padding-bottom: 16px;
+  width: 963px;
+  max-width: 100%;
+}
+
+.section.active .section-body {
+  display: block;
+}
+
+.section-body p {
+  font-size: 27px;
+  font-weight: 450;
+  line-height: 32px;
+  margin-bottom: 1em;
+}
+
+.section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.section-body .bold {
+  font-weight: 650;
+}
+
+.section-body .inline-link {
+  text-decoration: underline;
+  text-underline-position: from-font;
+}
+
+.section-body .inline-link:hover {
+  opacity: 0.8;
+}
+
+/* ============================================
+   GAMES LIST (Section 03)
+   ============================================ */
+.games-list {
+  display: flex;
+  flex-direction: column;
+  width: 963px;
+  max-width: 100%;
+  padding-bottom: 120px;
+}
+
+.game-row {
+  display: grid;
+  grid-template-columns: 1fr 168px 168px 126px;
+  align-items: center;
+  border-top: 1px solid var(--color-03);
+  min-height: 72px;
+  padding: 12px 0;
+  transition: opacity 0.2s ease;
+  width: 963px;
+  max-width: 100%;
+}
+
+.game-row:last-child {
+  border-bottom: 1px solid var(--color-03);
+}
+
+.game-row:hover {
+  opacity: 0.8;
+}
+
+.game-name {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -1.44px;
+  white-space: nowrap;
+}
+
+.game-platform,
+.game-type,
+.game-year {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.28px;
+  align-self: flex-end;
+}
+
+.game-platform {
+  text-align: left;
+}
+
+.game-type {
+  text-align: center;
+}
+
+.game-year {
+  text-align: right;
+}
+
+/* ============================================
+   GAME PREVIEW (Hover Image)
+   ============================================ */
+.game-preview {
+  position: fixed;
+  top: calc(20% + 103.6px);
+  left: calc(42.86% + 55.43px);
+  width: 481px;
+  height: 494px;
+  border-radius: 16px;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 50;
+}
+
+.game-preview.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.game-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   TRANSITIONS & ANIMATIONS
+   ============================================ */
+.section,
+.section-number,
+.section-header,
+.section-body,
+.game-row {
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* ============================================
+   RESPONSIVE (Basic adjustments)
+   ============================================ */
+@media (max-width: 1280px) {
+  .main-content {
+    padding-top: 120px;
+  }
+  
+  .sections-container {
+    width: 100%;
+  }
+  
+  .section-number {
+    font-size: 48px;
+    width: 70px;
+  }
+  
+  .header-btn {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  
+  .section-body p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .game-row {
+    grid-template-columns: 1fr auto auto auto;
+    gap: 16px;
+  }
+  
+  .game-name {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  
+  .game-preview {
+    display: none;
+  }
+  
+  .main-footer {
+    bottom: 16px;
+    right: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+  }
+  
+  .logo {
+    height: 28px;
+    width: auto;
+  }
+  
+  .ai-link {
+    font-size: 16px;
+  }
+  
+  .section-number {
+    font-size: 32px;
+    width: 50px;
+    line-height: 40px;
+  }
+  
+  .header-btn {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+  
+  .section-body p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .game-row {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 16px 0;
+    gap: 4px;
+  }
+  
+  .game-name {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  
+  .game-platform,
+  .game-type,
+  .game-year {
+    font-size: 12px;
+    text-align: left;
+    align-self: flex-start;
+  }
+  
+  .footer-label {
+    font-size: 14px;
+  }
+  
+  .footer-link {
+    font-size: 16px;
+  }
+}
+
