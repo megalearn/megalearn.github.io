@@ -1,31 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megalearn</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f5f5f5;
-        }
-        .logo-container {
-            text-align: center;
-        }
-        .logo {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Megalearn - Give Every Learner a Superhuman Tutor</title>
+  <meta name="description" content="Megalearn creates educational games and AI-powered learning experiences. Learn by building with Megalearn.AI.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/megalearn-logo.svg">
 </head>
-<body>
-    <div class="logo-container">
-        <img src="megalearnLogo.png" alt="Megalearn Logo" class="logo">
+<body data-theme="default">
+  <!-- Fixed Header -->
+  <header class="main-header">
+    <a href="/" class="logo">
+      <img src="assets/megalearn-logo.svg" alt="Megalearn" class="logo-img">
+    </a>
+    <nav class="right-menu">
+      <a href="https://megalearn.ai" target="_blank" rel="noopener" class="ai-link">Megalearn AI→</a>
+    </nav>
+  </header>
+
+  <!-- Main Content (Scrollable) -->
+  <main class="main-content">
+    <div class="sections-container">
+      <!-- Section 00 -->
+      <section class="section" data-section="00" data-color="blue">
+        <button class="section-number" aria-label="Toggle section 00">00</button>
+        <div class="section-content">
+          <h2 class="section-header">
+            <button class="header-btn" aria-label="Toggle section 00">give every learner a superhuman tutor</button>
+          </h2>
+          <div class="section-body">
+            <p>Megalearn's mission is to create a complete educational solution for the world. With modern AI, it is possible to give every learner a superhuman personal tutor. Humanity faces many problems that need to be solved, and galaxies waiting to be explored. We want to use AI-based personal tutoring to let everyone discover what they are good at, and how those talents can be applied to something the world needs</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 01 -->
+      <section class="section" data-section="01" data-color="pink">
+        <button class="section-number" aria-label="Toggle section 01">01</button>
+        <div class="section-content">
+          <h2 class="section-header">
+            <button class="header-btn" aria-label="Toggle section 01">Learn by Building</button>
+          </h2>
+          <div class="section-body">
+            <p><a href="https://megalearn.ai" target="_blank" rel="noopener" class="inline-link bold">Megalearn.AI</a> empowers anyone to master <span class="inline-link bold">Lua</span>, the programming language used to make games in Roblox and other popular game engines. Our platform provides an all-in-one solution where you can learn coding, math, and how to collaborate with AI to build immersive worlds. You don't have to build alone—create and explore interactive environments in real-time with your friends. We believe the best way to learn is by building, and building together.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 02 -->
+      <section class="section" data-section="02" data-color="orange">
+        <button class="section-number" aria-label="Toggle section 02">02</button>
+        <div class="section-content">
+          <h2 class="section-header">
+            <button class="header-btn" aria-label="Toggle section 02">The team</button>
+          </h2>
+          <div class="section-body">
+            <p><span class="bold">Megalearn</span> was founded in the spring of 2016 by <a href="#" class="inline-link bold">Per Thulin</a> (the programmer) and <a href="#" class="inline-link bold">Joy Leelawat</a> (the artist).</p>
+            <p><span class="bold">Per</span> is Megalearn's programmer. As a child, Per was interested in animals, nature and computer games. Later on he learned programming and started making his own games. Megalearn allows him to combine his two passions. Per has a B.Sc. in Media Technology.</p>
+            <p><span class="bold">Joy</span> is Megalearn's designer. As a child, Joy grew up in Thailand, surrounded by beautiful nature. Joy's interests in architecture, philosophy and painting has lead her to develop a sophisticated and unique art style. Joy has a MSc. in Media Technology and Game Design from ITU of Copenhagen, a M.Arch in Urban planning from KU Leuven and a B.Arch from Chulalongkorn University.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 03 -->
+      <section class="section" data-section="03" data-color="black">
+        <button class="section-number" aria-label="Toggle section 03">03</button>
+        <div class="section-content">
+          <h2 class="section-header">
+            <button class="header-btn" aria-label="Toggle section 03">Games we made</button>
+          </h2>
+          <div class="section-body">
+            <div class="games-list">
+              <a href="games/tao-kae-noi-world.html" class="game-row" data-game="tao-kae-noi-world">
+                <span class="game-name">Tao Kae Noi World</span>
+                <span class="game-platform">Roblox</span>
+                <span class="game-type">Tycoon-style game</span>
+                <span class="game-year">2025</span>
+              </a>
+              <a href="games/vasa-ship.html" class="game-row" data-game="vasa-ship">
+                <span class="game-name">The Vasa Ship</span>
+                <span class="game-platform">Roblox</span>
+                <span class="game-type">Educational game</span>
+                <span class="game-year">2024</span>
+              </a>
+              <a href="games/mega-museum-world.html" class="game-row" data-game="mega-museum-world">
+                <span class="game-name">Mega Museum World</span>
+                <span class="game-platform">Roblox</span>
+                <span class="game-type">Educational game</span>
+                <span class="game-year">2024</span>
+              </a>
+              <a href="games/bloom.html" class="game-row" data-game="bloom">
+                <span class="game-name">Bloom</span>
+                <span class="game-platform">iPhone/ iPad</span>
+                <span class="game-type">Educational game</span>
+                <span class="game-year">2016</span>
+              </a>
+              <a href="games/finding-stubby.html" class="game-row" data-game="finding-stubby">
+                <span class="game-name">Finding Stubby</span>
+                <span class="game-platform">iPhone/ iPad</span>
+                <span class="game-type">Educational game</span>
+                <span class="game-year">2016</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+
+    <!-- Game Preview Image (shown on hover) -->
+    <div class="game-preview" id="gamePreview">
+      <img src="" alt="" class="game-preview-img" id="gamePreviewImg">
+    </div>
+  </main>
+
+  <!-- Fixed Footer -->
+  <footer class="main-footer">
+    <span class="footer-label">Contact</span>
+    <a href="mailto:contact@megalearn.se" class="footer-link">contact@megalearn.se</a>
+    <a href="https://twitter.com/megalearnapp" target="_blank" rel="noopener" class="footer-link">@megalearnapp</a>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
+

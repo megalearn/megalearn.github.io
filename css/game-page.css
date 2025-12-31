@@ -1,0 +1,144 @@
+/* ============================================
+   GAME PAGE STYLES
+   ============================================ */
+
+body {
+  overflow-y: auto;
+}
+
+.game-page-content {
+  padding: 80px 12px 200px;
+  max-width: 1073px;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.72px;
+  color: var(--black);
+  margin-bottom: 48px;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+.game-details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.game-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.game-title {
+  font-size: 80px;
+  font-weight: 1000;
+  line-height: 64px;
+  letter-spacing: -2.4px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.game-meta {
+  display: flex;
+  gap: 32px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.36px;
+  color: var(--black);
+}
+
+.game-hero {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.game-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.game-description {
+  max-width: 800px;
+}
+
+.game-description p {
+  font-size: 27px;
+  font-weight: 450;
+  line-height: 32px;
+  color: var(--black);
+  margin-bottom: 1em;
+}
+
+.game-description p:last-child {
+  margin-bottom: 0;
+}
+
+.game-actions {
+  margin-top: 16px;
+}
+
+.play-button {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.72px;
+  color: var(--black);
+  padding: 16px 32px;
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.play-button:hover {
+  background-color: var(--black);
+  color: var(--bg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .game-page-content {
+    padding: 80px 12px 120px;
+  }
+
+  .back-link {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .game-title {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+
+  .game-meta {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .game-description p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .play-button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}
+
