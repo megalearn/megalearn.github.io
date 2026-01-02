@@ -44,6 +44,34 @@
     setupGameHoverListeners();
     setupLogoListener();
     setupKeyboardNavigation();
+    setupHashNavigation();
+    handleInitialHash();
+  }
+
+  /**
+   * Handle initial URL hash on page load
+   */
+  function handleInitialHash() {
+    const hash = window.location.hash.slice(1); // Remove the #
+    if (hash && sectionOrder.includes(hash)) {
+      toggleSection(hash, false); // Don't update hash since it's already set
+    }
+  }
+
+  /**
+   * Set up hash change listener for back/forward navigation
+   */
+  function setupHashNavigation() {
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.slice(1);
+      if (hash && sectionOrder.includes(hash)) {
+        if (activeSection !== hash) {
+          toggleSection(hash, false);
+        }
+      } else if (!hash && activeSection) {
+        resetToDefault(false);
+      }
+    });
   }
 
   /**
@@ -62,7 +90,7 @@
   /**
    * Reset to default state (Front screen)
    */
-  function resetToDefault() {
+  function resetToDefault(updateHash = true) {
     const body = document.body;
     
     // Deactivate any active section
@@ -77,6 +105,11 @@
     body.removeAttribute('data-active-section');
     body.dataset.theme = 'default';
     activeSection = null;
+    
+    // Update URL hash
+    if (updateHash) {
+      history.pushState(null, '', window.location.pathname);
+    }
     
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -108,7 +141,7 @@
   /**
    * Toggle a section's active state
    */
-  function toggleSection(sectionId) {
+  function toggleSection(sectionId, updateHash = true) {
     const section = document.querySelector(`[data-section="${sectionId}"]`);
     const body = document.body;
 
@@ -118,6 +151,11 @@
       body.removeAttribute('data-active-section');
       body.dataset.theme = 'default';
       activeSection = null;
+      
+      // Update URL hash
+      if (updateHash) {
+        history.pushState(null, '', window.location.pathname);
+      }
     } else {
       // Deactivate previous section if any
       if (activeSection) {
@@ -132,6 +170,11 @@
       body.dataset.activeSection = sectionId;
       body.dataset.theme = sectionThemes[sectionId];
       activeSection = sectionId;
+      
+      // Update URL hash
+      if (updateHash) {
+        history.pushState(null, '', `#${sectionId}`);
+      }
 
       // Scroll to show the section content
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
