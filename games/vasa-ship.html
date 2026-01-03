@@ -29,45 +29,87 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/game-page.css">
-  <link rel="icon" type="image/svg+xml" href="../assets/megalearn-logo.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/megalearn.svg">
 </head>
 <body data-theme="black">
   <!-- Fixed Header -->
-  <header class="main-header">
-    <a href="../" class="logo">
-      <img src="../assets/megalearn-logo.svg" alt="Megalearn" class="logo-img">
-    </a>
-    <nav class="right-menu">
-      <a href="https://megalearn.ai" target="_blank" rel="noopener" class="ai-link">Megalearn AI→</a>
-    </nav>
+  <header class="game-header">
+    <div class="game-header-top">
+      <h1 class="game-title">The Vasa Ship</h1>
+      <a href="../#games" class="back-link">[Back]</a>
+    </div>
+    <p class="game-subtitle">Educational game about Swedish maritime history</p>
   </header>
 
   <!-- Main Content -->
   <main class="game-page-content">
-    <a href="../#games" class="back-link">← Back to Games</a>
-    
-    <article class="game-details">
-      <header class="game-header">
-        <h1 class="game-title">The Vasa Ship</h1>
-        <div class="game-meta">
-          <span class="game-platform">Roblox</span>
-          <span class="game-type">Educational game</span>
-          <span class="game-year">2024</span>
+    <!-- ===========================================
+         HERO VIDEO (YouTube)
+         =========================================== -->
+         <div class="game-hero">
+          <div class="game-hero-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ni97rhs0uGI?si=qzzMqNvJUhPOUlSa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         </div>
-      </header>
+    
+    <!-- Hero Image 
+    <div class="game-hero">
+      <img src="../assets/images/games/vasa/hero.png" alt="The Vasa Ship gameplay" class="game-hero-img">
+    </div>-->
 
-      <div class="game-hero">
-        <img src="../assets/images/vasa-ship.png" alt="The Vasa Ship gameplay screenshot" class="game-hero-img">
+    <!-- About Section -->
+    <section class="content-section">
+      <h2 class="section-label">About</h2>
+      <div class="section-content about-text">
+        The Vasa, a mighty warship, is sinking! On August 10, 1628 in Stockholm, disaster struck as the ship heeled and took on water. With time running out, can you rescue the crew and passengers before it's too late? Players can access this mini game via our Mega Museum Portal. Enjoy!
       </div>
+    </section>
 
-      <div class="game-description">
-        <p>Coming soon - detailed game description and screenshots.</p>
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+      <div class="gallery-image">
+        <img src="../assets/images/games/vasa/officer_full.jpg" alt="officer">
       </div>
+      <div class="gallery-image">
+        <img src="../assets/images/games/vasa/ship_deck.png" alt="Vasa Ship Deck">
+      </div>
+    </div>
 
-      <div class="game-actions">
-        <a href="#" class="play-button" target="_blank" rel="noopener">Play on Roblox →</a>
+    <!-- Purpose Section -->
+    <section class="content-section">
+      <h2 class="section-label">Purpose of the game</h2>
+      <div class="section-content body-text">
+        <p>The Vasa Ship game is designed to make history come alive for players of all ages. By combining engaging gameplay with educational content, players gain a deeper understanding of Swedish maritime history and the engineering challenges of the 17th century.</p>
+        <p>The game serves as a virtual extension of the Vasa Museum in Stockholm, allowing players worldwide to experience the story of the Vasa ship in an interactive and memorable way.</p>
       </div>
-    </article>
+    </section>
+
+    <!-- Learning Outcomes Section -->
+    <section class="content-section">
+      <h2 class="section-label">Learning Outcomes</h2>
+      <div class="section-content body-text">
+        <p>Understand the story of the Vasa ship, from its construction to its sinking and eventual recovery. Learn about 17th-century Swedish society and the importance of naval power during that era.</p>
+      </div>
+    </section>
+
+    <!-- ===========================================
+         IMAGE GALLERY - Single large image
+         =========================================== -->
+         <div class="image-gallery single">
+          <div class="gallery-image">
+            <img src="../assets/images/games/vasa/hero.png" alt="The vasa-ship exterior">
+          </div>
+        </div>
+    <!-- Final Images -->
+    <div class="image-gallery">
+      <div class="gallery-image">
+        <img src="../assets/images/games/vasa/captain.jpg" alt="captain">
+      </div>
+      <div class="gallery-image">
+        <img src="../assets/images/games/vasa/ship_exterior.png" alt="Vasa Ship Exterior">
+      </div>
+    </div>
+
   </main>
 
   <!-- Fixed Footer -->
@@ -78,4 +120,3 @@
   </footer>
 </body>
 </html>
-

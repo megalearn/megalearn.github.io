@@ -128,7 +128,8 @@ body {
   background-color: var(--bg);
   color: var(--black);
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 a {
@@ -242,21 +243,17 @@ img {
 
 /* Main Content Area (Scrollable) */
 .main-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
+  position: relative;
   padding-top: calc(40vh);
   padding-left: 12px;
+  padding-right: 12px;
   padding-bottom: 200px;
+  max-width: 1600px;
 }
 
 .sections-container {
-  width: 1073px;
-  max-width: calc(100vw - 24px);
+  width: 85.71%; /* 6 columns (6/7 = 85.71%) */
+  max-width: 1371px; /* 6 columns at 1600px base (1600 × 85.71%) */
 }
 
 /* ============================================
@@ -349,7 +346,7 @@ body[data-active-section] .section:not(.active):hover .section-header {
   letter-spacing: -2.4px;
   text-transform: uppercase;
   text-align: left;
-  width: 963px;
+  width: 1280px; /* ends at column 6 */
   max-width: 100%;
   padding: 0;
   transition: opacity 0.2s ease;
@@ -364,7 +361,7 @@ body[data-active-section] .section:not(.active):hover .section-header {
   display: none;
   padding-bottom: 16px;
   width: 100%;
-  max-width: 963px;
+  max-width: 1280px; /* ends at column 6 */
 }
 
 .section.active .section-body {
@@ -401,7 +398,7 @@ body[data-active-section] .section:not(.active):hover .section-header {
 .games-list {
   display: flex;
   flex-direction: column;
-  width: 963px;
+  width: 1280px; /* ends at column 6 */
   max-width: 100%;
   padding-bottom: 120px;
 }
@@ -414,7 +411,7 @@ body[data-active-section] .section:not(.active):hover .section-header {
   min-height: 72px;
   padding: 12px 0;
   transition: opacity 0.2s ease;
-  width: 963px;
+  width: 100%;
   max-width: 100%;
 }
 
